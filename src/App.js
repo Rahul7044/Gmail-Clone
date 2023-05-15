@@ -1,10 +1,24 @@
-import Signup from "./components/LoginSignup/Signup";
-
+import { useSelector } from "react-redux";
+import LoginSignup from "./components/LoginSignup/LoginSignup";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./components/Pages/Home/HomePage";
 
 function App() {
+  const isLogin = useSelector(state=> state.auth.userAuth.isLogin);
+  console.log(isLogin)
+
+
   return (
-    <Signup></Signup>
+    <>
+    <Routes>
+      {!isLogin && <Route path={'/'} element={<LoginSignup></LoginSignup>}></Route>}
+      {isLogin && <Route path={'/home'} element={<HomePage/>}></Route>}
+      {!isLogin && <Route path={'*'} element={<LoginSignup/>}></Route>}
+      {isLogin && <Route path={'*'} element={<HomePage/>}></Route>}
+
+    </Routes>
+
+    </>
   );
 }
-
 export default App;
