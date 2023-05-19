@@ -1,6 +1,6 @@
-import { useSelector } from "react-redux";
 import LoginSignup from "./components/LoginSignup/LoginSignup";
 import { Route, Routes } from "react-router-dom";
+import { useSelector } from "react-redux";
 import ComposeEmail from "./components/Pages/Home/ComposeEmail";
 import Header from "./components/Pages/Home/Header";
 import InboxPage from "./components/Pages/Inbox/InboxPage";
