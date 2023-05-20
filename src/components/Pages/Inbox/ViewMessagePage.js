@@ -9,7 +9,7 @@ async function getMessage(email, id ,inbox) {
   
     if(inbox === "recivedmails"){
          await fetch(
-            `https://mail-box-client-18fab-default-rtdb.firebaseio.com/mailbox/${emailID}/${inbox}/${id}.json`,
+            `https://react-http-d9b27-default-rtdb.firebaseio.com/mailbox/%20%20%20%20%20%20users/${emailID}/${inbox}/${id}.json`,
             {
               method: "PATCH",
               headers: {
@@ -21,7 +21,7 @@ async function getMessage(email, id ,inbox) {
     }
   
     const response = await fetch(
-      `https://mail-box-client-18fab-default-rtdb.firebaseio.com/mailbox/${emailID}/${inbox}/${id}.json`
+      `https://react-http-d9b27-default-rtdb.firebaseio.com/mailbox/%20%20%20%20%20%20users/${emailID}/${inbox}/${id}.json`
     );
     const data = await response.json();
 

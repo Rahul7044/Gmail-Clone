@@ -8,14 +8,14 @@ import { useSelector } from "react-redux";
 async function sendMail(senderId , reciverId , sentData , reciveData ,setSending){
     setSending(true);
     try {
-      const responseToSender = await fetch(`https://mail-box-client-18fab-default-rtdb.firebaseio.com/mailbox/${senderId}/sentmails.json`,{
+      const responseToSender = await fetch(`https://react-http-d9b27-default-rtdb.firebaseio.com//mailbox/users/${reciverId}/recivedmails.json`,{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
         },
         body:JSON.stringify(sentData)
       })
-      await fetch(`https://mail-box-client-18fab-default-rtdb.firebaseio.com/mailbox/${reciverId}/recivedmails.json`,{
+      await fetch(`https://react-http-d9b27-default-rtdb.firebaseio.com/mailbox/users/${reciverId}/recivedmails.json`,{
         method:'POST',
         headers:{
             'Content-Type':'application/json'

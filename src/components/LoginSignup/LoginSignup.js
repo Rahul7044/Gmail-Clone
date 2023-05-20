@@ -7,10 +7,10 @@ import { useNavigate } from "react-router-dom";
 async function loginAndSignUp(userDetails, signUpMode) {
   let url = '';
   if (signUpMode) {
-    url = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB1d_nqy6iG8ug3zuyzA3M6oDAdVtXP16Q";
+    url = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBW-OyxBSY0CHdXrVbO1abiHLglYKd74mI";
 
   } else {
-    url = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB1d_nqy6iG8ug3zuyzA3M6oDAdVtXP16Q";
+    url = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBW-OyxBSY0CHdXrVbO1abiHLglYKd74mI";
   }
   try {
     const response = await fetch(url, {
